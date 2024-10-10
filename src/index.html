@@ -1,0 +1,486 @@
+<html>
+  <head>
+    <title>Commurz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .fade-in {
+        animation: fadeIn 2s ease-in-out;
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .slide-up {
+        animation: slideUp 1s ease-in-out;
+      }
+      @keyframes slideUp {
+        0% {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      .hover-grow:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+      }
+      .hover-bg:hover {
+        background-color: #38b2ac;
+        transition: background-color 0.3s ease-in-out;
+      }
+      .hover-text:hover {
+        color: #38b2ac;
+        transition: color 0.3s ease-in-out;
+      }
+      .bounce {
+        animation: bounce 2s infinite;
+      }
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-30px);
+        }
+        60% {
+          transform: translateY(-15px);
+        }
+      }
+      .pop-up {
+        animation: popUp 0.5s ease-in-out;
+      }
+      @keyframes popUp {
+        0% {
+          transform: scale(0.5);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      .hover-scale img:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md fade-in">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="text-2xl font-bold text-green-700">Commurz</div>
+        <nav class="hidden md:flex space-x-6">
+          <a class="text-gray-600 hover:text-gray-800 hover-text" href="#">
+            Home
+          </a>
+          <a class="text-gray-600 hover:text-gray-800 hover-text" href="#">
+            Features
+          </a>
+          <a class="text-gray-600 hover:text-gray-800 hover-text" href="#">
+            Pricing
+          </a>
+          <a class="text-gray-600 hover:text-gray-800 hover-text" href="#">
+            Contact
+          </a>
+        </nav>
+        <div class="hidden md:flex space-x-4">
+          <a class="text-gray-600 hover:text-gray-800 hover-text" href="#">
+            Log in
+          </a>
+          <a
+            class="bg-gradient-to-r from-green-400 to-green-700 text-white px-4 py-2 rounded-full shadow-lg hover:shadow-xl transition duration-300 hover-grow"
+            href="#"
+          >
+            Get Started
+          </a>
+        </div>
+        <div class="md:hidden">
+          <button
+            class="text-gray-600 hover:text-gray-800 focus:outline-none"
+            id="mobile-menu-button"
+          >
+            <i class="fas fa-bars"> </i>
+          </button>
+        </div>
+      </div>
+      <div class="hidden md:hidden" id="mobile-menu">
+        <nav class="px-4 py-4 space-y-2">
+          <a
+            class="block text-gray-600 hover:text-gray-800 hover-text"
+            href="#"
+          >
+            Home
+          </a>
+          <a
+            class="block text-gray-600 hover:text-gray-800 hover-text"
+            href="#"
+          >
+            Features
+          </a>
+          <a
+            class="block text-gray-600 hover:text-gray-800 hover-text"
+            href="#"
+          >
+            Pricing
+          </a>
+          <a
+            class="block text-gray-600 hover:text-gray-800 hover-text"
+            href="#"
+          >
+            Contact
+          </a>
+          <a
+            class="block text-gray-600 hover:text-gray-800 hover-text"
+            href="#"
+          >
+            Log in
+          </a>
+          <a
+            class="block bg-gradient-to-r from-green-400 to-green-700 text-white px-4 py-2 rounded-full shadow-lg hover:shadow-xl transition duration-300 hover-grow"
+            href="#"
+          >
+            Get Started
+          </a>
+        </nav>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4 py-16 text-center fade-in">
+      <h1 class="text-5xl font-bold text-gray-800">
+        Explore, shop, repeat again.
+      </h1>
+      <p class="text-xl text-gray-600 mt-4">
+        Commurz is a platform that handles the chaos of everyday commerce so you
+        can focus on your life, not your cart.
+      </p>
+      <a
+        class="mt-8 inline-block bg-gradient-to-r from-green-400 to-green-700 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition duration-300 hover-grow bounce"
+        href="#"
+      >
+        Try it free
+      </a>
+    </section>
+    <!-- Features Section -->
+    <section
+      class="container mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+    >
+      <div
+        class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 slide-up hover-grow pop-up hover-scale"
+      >
+        <img
+          alt="Product image"
+          class="w-full h-48 object-cover rounded-lg"
+          height="200"
+          src="https://storage.googleapis.com/a1aa/image/HNyE5HigeIS6e0CxkPGGriPPftRIVmqe5Plg6iKSnvS6joTOB.jpg"
+          width="300"
+        />
+        <h2 class="text-xl font-bold mt-4">Nike ZoomX Vaporfly</h2>
+        <p class="text-gray-600 mt-2">$243.89</p>
+      </div>
+      <div
+        class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 slide-up hover-grow pop-up"
+      >
+        <h2 class="text-xl font-bold">Total Sales</h2>
+        <p class="text-3xl font-bold text-green-700 mt-2">$243.89</p>
+        <div class="mt-4 hover-scale">
+          <img
+            alt="Sales chart"
+            class="w-full h-48 object-cover rounded-lg"
+            height="200"
+            src="https://storage.googleapis.com/a1aa/image/QokvmKGwUfQNGyTsCCO8Hs3vzUyAjl3lfrgfzLn0f4vKkoTOB.jpg"
+            width="300"
+          />
+        </div>
+      </div>
+      <div
+        class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 slide-up hover-grow pop-up"
+      >
+        <h2 class="text-xl font-bold">50x</h2>
+        <p class="text-gray-600 mt-2">More customers every week</p>
+      </div>
+      <div
+        class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 slide-up hover-grow pop-up hover-scale"
+      >
+        <img
+          alt="Customer image"
+          class="w-full h-48 object-cover rounded-lg"
+          height="200"
+          src="https://storage.googleapis.com/a1aa/image/3ShaNHV4eJURYC9CvAwadqSzBcZeiQ4mMjWW9LUQofJLS0JnA.jpg"
+          width="300"
+        />
+        <h2 class="text-xl font-bold mt-4">Customer</h2>
+        <p class="text-gray-600 mt-2">Happy customer using our platform</p>
+      </div>
+    </section>
+    <!-- Personalized Shopping Experience Section -->
+    <section class="bg-gradient-to-r from-green-100 to-green-200 py-16 fade-in">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold">Personalized shopping experience</h2>
+        <p class="text-gray-600 mt-4">
+          Discover a shopping experience like no other with our cutting-edge
+          personalization algorithms.
+        </p>
+        <div
+          class="mt-8 bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 inline-block slide-up hover-grow pop-up hover-scale"
+        >
+          <h3 class="text-xl font-bold">One-click express checkout</h3>
+          <p class="text-gray-600 mt-2">
+            Experience seamless checkout with just a single click. It's as
+            simple as shopping on the web.
+          </p>
+          <img
+            alt="Checkout process"
+            class="w-full h-48 object-cover rounded-lg mt-4"
+            height="200"
+            src="https://storage.googleapis.com/a1aa/image/mmeIAVscya3fPEcTbEpJUhED9TJhXE8wfQf9iDcGnnlBkoTOB.jpg"
+            width="300"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Simplify E-commerce Section -->
+    <section class="container mx-auto px-4 py-16 text-center fade-in">
+      <h2 class="text-3xl font-bold">
+        Commurz is designed to simplify the complexities of e-commerce providing
+        you with the tools you need to create, manage, and grow your store.
+      </h2>
+      <img
+        alt="E-commerce tools"
+        class="w-full h-48 object-cover rounded-lg mt-4 hover-scale"
+        height="200"
+        src="https://storage.googleapis.com/a1aa/image/0sw0riPubRL4FBpiVw9XApDK3f4On0vM0KfX5s9W8iV9I6kTA.jpg"
+        width="300"
+      />
+    </section>
+    <!-- Global Selling Section -->
+    <section
+      class="container mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-8"
+    >
+      <div class="slide-up">
+        <h2 class="text-3xl font-bold">
+          Effortless global selling by share a link – super fast ⚡
+        </h2>
+        <p class="text-gray-600 mt-4">
+          Now you can sell all your products instantly across the globe with a
+          simple link. It's as easy as sharing a link.
+        </p>
+        <a
+          class="mt-8 inline-block bg-gradient-to-r from-green-400 to-green-700 text-white px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition duration-300 hover-grow bounce"
+          href="#"
+        >
+          Learn more
+        </a>
+      </div>
+      <div class="slide-up">
+        <img
+          alt="Global selling"
+          class="w-full h-48 object-cover rounded-lg hover-scale"
+          height="200"
+          src="https://storage.googleapis.com/a1aa/image/ukUPw6AQxU7WLVObEnoDycjRGd0Hl2ZcovMO4Oj8pjYQiO5E.jpg"
+          width="300"
+        />
+        <div class="mt-4 flex items-center">
+          <input
+            class="border border-gray-300 rounded-full px-4 py-2 w-full"
+            placeholder="https://commurz.com/product/123"
+            type="text"
+          />
+          <button
+            class="bg-gradient-to-r from-green-400 to-green-700 text-white px-4 py-2 rounded-full ml-2 shadow-lg hover:shadow-xl transition duration-300 hover-grow bounce"
+          >
+            Copy
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Numbers Section -->
+    <section
+      class="bg-gradient-to-r from-green-700 to-green-900 text-white py-16 fade-in"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold">Numbers speak louder</h2>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="slide-up">
+            <h3 class="text-5xl font-bold">3M</h3>
+            <p class="mt-2">
+              Users worldwide trust Commurz to handle their e-commerce needs.
+            </p>
+          </div>
+          <div class="slide-up">
+            <h3 class="text-5xl font-bold">87%</h3>
+            <p class="mt-2">Increase in sales for businesses using Commurz.</p>
+          </div>
+          <div class="slide-up">
+            <h3 class="text-5xl font-bold">24/7</h3>
+            <p class="mt-2">Customer support available around the clock.</p>
+          </div>
+        </div>
+        <img
+          alt="Global reach"
+          class="w-full h-48 object-cover rounded-lg mt-8 pop-up hover-scale"
+          height="200"
+          src="https://storage.googleapis.com/a1aa/image/EJDKDhEDKMZFGpaNUmF3Rd1epNEWTiNvpBIAfv1NJMZEJ6kTA.jpg"
+          width="300"
+        />
+      </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section class="container mx-auto px-4 py-16 fade-in">
+      <h2 class="text-3xl font-bold text-center">What our clients say</h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 slide-up hover-grow pop-up"
+        >
+          <p class="text-gray-600">
+            "This platform is a game-changer! Fast and easy shopping."
+          </p>
+          <p class="mt-4 font-bold">Tony Stark - Shopify</p>
+        </div>
+        <div
+          class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 slide-up hover-grow pop-up"
+        >
+          <p class="text-gray-600">
+            "Commurz is a solution for my business. Seamless customization and
+            round-the-clock support."
+          </p>
+          <p class="mt-4 font-bold">Sarah Johnson - Tailwind</p>
+        </div>
+      </div>
+    </section>
+    <!-- Call to Action Section -->
+    <section
+      class="bg-gradient-to-r from-green-700 to-green-900 text-white py-16 fade-in"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold">Join our e-commerce revolution today</h2>
+        <p class="mt-4">
+          Discover the future of e-commerce with us. Sign up now and experience
+          effortless, personalized shopping, and grow your store.
+        </p>
+        <a
+          class="mt-8 inline-block bg-white text-green-700 px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition duration-300 hover-grow bounce"
+          href="#"
+        >
+          Sign Up Now
+        </a>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 fade-in">
+      <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold">Commurz</h3>
+          <p class="mt-4">
+            Commurz is a platform that handles the chaos of everyday commerce so
+            you can focus on your life, not your cart.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold">Pages</h3>
+          <ul class="mt-4 space-y-2">
+            <li>
+              <a class="hover:underline" href="#"> Home </a>
+            </li>
+            <li>
+              <a class="hover:underline" href="#"> Features </a>
+            </li>
+            <li>
+              <a class="hover:underline" href="#"> Pricing </a>
+            </li>
+            <li>
+              <a class="hover:underline" href="#"> Contact </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold">Company</h3>
+          <ul class="mt-4 space-y-2">
+            <li>
+              <a class="hover:underline" href="#"> About Us </a>
+            </li>
+            <li>
+              <a class="hover:underline" href="#"> Careers </a>
+            </li>
+            <li>
+              <a class="hover:underline" href="#"> Blog </a>
+            </li>
+            <li>
+              <a class="hover:underline" href="#"> Press </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold">Developers</h3>
+          <ul class="mt-4 space-y-2">
+            <li>
+              <a class="hover:underline" href="#"> API Documentation </a>
+            </li>
+            <li>
+              <a class="hover:underline" href="#"> Developer Tools </a>
+            </li>
+            <li>
+              <a class="hover:underline" href="#"> Community </a>
+            </li>
+            <li>
+              <a class="hover:underline" href="#"> Support </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 text-center">
+        <p>© 2023 Commurz Inc. All rights reserved.</p>
+        <div class="mt-4 space-x-4">
+          <a class="text-white hover:text-gray-400" href="#">
+            <i class="fab fa-facebook-f"> </i>
+          </a>
+          <a class="text-white hover:text-gray-400" href="#">
+            <i class="fab fa-twitter"> </i>
+          </a>
+          <a class="text-white hover:text-gray-400" href="#">
+            <i class="fab fa-instagram"> </i>
+          </a>
+          <a class="text-white hover:text-gray-400" href="#">
+            <i class="fab fa-linkedin-in"> </i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          var menu = document.getElementById("mobile-menu");
+          if (menu.classList.contains("hidden")) {
+            menu.classList.remove("hidden");
+          } else {
+            menu.classList.add("hidden");
+          }
+        });
+    </script>
+  </body>
+</html>
